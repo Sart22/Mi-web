@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,600&family=Spline+Sans+Mono:wght@500&display=swap');
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position:fixed;
+    width: 100%;
+    height: 100px;
+    padding: 0 50px;
+    background:rgba(0,0,0,0.4);
+    border-bottom:1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  }
+
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.mostrar-menu, .esconder-menu{
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+
+.mostrar-menu{
+  order:1;
+}
+
+.menu a:hover,.mostrar-menu:hover,.esconder-munu:hover{
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+}
+
+#check{
+  display: none;
+}
+
+/*RESPONSIVE*/
+@media(max-width:768px){
+  /*HEADER*/
+  .mostrar-menu, .esconder-menu{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    left: 0;
+    right:-100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+  }
+  .esconder-menu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #check:checked ~ .menu{
+    right: 0;
+  }
+}
+  
+
+.home {
+  /* Aquí el origen de la imagen */
+  background-image: url(/Img/backbround-image01.jpg);
+   overflow: hidden;
+   height: 100vh;
+   background-size: contain;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ /* Con esto cambiamos el color de la fuente, en este caso..solo del BODY */
+   color:aliceblue;
+}
+      .logo img{
+        height: 75px;
+        margin-right: 10px;
+      }
+
+      nav a:hover{
+            color:white;
+
+      }
+      
+.presentacion { 
+  background-image: url(/Img/me.jpg);
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+body {
+
+  /* Con esto cambiamos el color de la fuente, en este caso..solo del BODY */
+  color:rgb(13, 15, 17);
+
+  /* Aquí el origen de la imagen */
+  background-image: whitesmoke;
+
+  /* Fijar la imagen de fondo este vertical y
+    horizontalmente centrado */
+  background-position: center center;
+
+  /* Esta imagen no debe de repetirse */
+  background-repeat: no-repeat;
+
+  /* COn esta regla fijamos la imagen en la pantalla. */
+  background-attachment: fixed;
+
+  /* La imagen ocupa el 100% y se reescala */
+  background-size: cover;
+
+  /* Damos un color de fondo mientras la imagen está cargando  */
+  background-color: whitesmoke;
+}
