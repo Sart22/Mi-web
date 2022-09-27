@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 /*HEADER/CABECERA*/
 header{
@@ -65,7 +66,7 @@ header{
 
 .home {
   /* Aquí el origen de la imagen */
-  background-image: url(/Img/backbround-image01.jpg);
+  background-image: url(/img/background-home.jpg);
    overflow: hidden;
    height: 100vh; 
    display: flex;
@@ -137,8 +138,124 @@ body {
   justify-content: center;
   text-align: center;
 }
-
 /*FIN DE SOBRE MI*/
+
+/*COMIENZO PORTFOLIO*/
+
+.portfolio{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 3fr;
+}
+.portfolio-titulo{
+    color: black;
+    font-size: 35px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+  
+.contenedor-proyecto{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.proyecto{
+  border-radius: 10px;
+  min-height: 275px;
+  font-weight: bold;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+
+.texto-proyecto{
+  color: crimson;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*FIN PORTFOLIO*/
+
+
+/*INICIO DE PIE DE PAGINA*/
+.pie{
+  
+background: rgb(143,10,10);
+background: -moz-radial-gradient(circle, rgba(143,10,10,1) 2%, rgba(36,0,0,1) 55%, rgba(130,1,25,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(143,10,10,1) 2%, rgba(36,0,0,1) 55%, rgba(130,1,25,1) 100%);
+background: radial-gradient(circle, rgba(143,10,10,1) 2%, rgba(36,0,0,1) 55%, rgba(130,1,25,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f0a0a",endColorstr="#820119",GradientType=1);
+}
+.pie .grupo-1{
+
+max-width: 1200px;
+margin:auto;
+padding:15px 0px;
+}
+
+.pie .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+  text-align: center;
+}
+/*Comienzo de Contactame*/
+.red-social{
+  min-width: 100px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.pie .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 28px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin-right: 10px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+  transition: all .4s ease-in-out;
+}
+
+.red-social a:hover{
+  transform: scale(1.2);
+}
+/*
+.pie .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+/*TAMAÑO Y POSICION DEL LOGO
+.pie .grupo-1 .box figure img{
+  width: 150px;
+} */
+
+/*Final de Contactame*/
+.leyenda{
+  text-align: center;
+  color: #fff;
+}
+.leyenda small{
+  font-size: 15px;
+}
+/*FIN DE PIE DE PAGINA*/
+
 
 /*RESPONSIVE*/
 @media(max-width:768px){
@@ -171,5 +288,13 @@ body {
   #check:checked ~ .menu{
     right: 0;
   }
+  /*FOOTER*/
+  .pie .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
 }
+
 /*FIN DE RESPONSIVE*/  
