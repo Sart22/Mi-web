@@ -336,6 +336,13 @@ padding:15px 0px;
 
 
 /*RESPONSIVE*/
+@media(max-width: 991px){
+section {
+  padding: 50px 0px;
+}
+}
+
+
 @media(max-width:768px){
   /*HEADER*/
   .mostrar-menu, 
@@ -366,6 +373,32 @@ padding:15px 0px;
   #check:checked ~ .menu{
     right: 0;
   }
+
+  section {
+    padding: 20px 0;
+  }
+
+.about-titulo {
+    font-size: 25px;
+}
+.about-grid {
+  grid-template-columns: 1fr;
+}
+.about-descripcion {
+  padding-right: 0px;
+}
+.about__skills {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.skill__title {
+  grid-column: span 3;
+}
+.skill__item {
+  font-size: 50px;
+    padding: 5px;
+    min-width: max-content;
+}
+
   /*FOOTER*/
   .pie .grupo-1{
     width: 90%;
