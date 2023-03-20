@@ -7,6 +7,9 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 h2{
   display: block;
   font-size: 1.5em;
@@ -17,6 +20,9 @@ h2{
   font-weight: bold;
   }
 
+  section[id] {
+    scroll-margin-top: 30px;
+  }
 section{
   display: block;
 }
@@ -24,7 +30,65 @@ img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
-/*HEADER/CABECERA*/
+a {
+  text-decoration: none;
+}
+
+.topheader{
+  background:rgba(0,0,0,0.4);
+  position:fixed;
+  width: 100%;
+  border-bottom:1px solid transparent;
+  margin: 0 auto;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.menu{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 0 15px;
+}
+.menu a {
+  color:rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.open-menu,
+.close-menu{
+  display: none;
+}
+.menu a:hover,
+.open-menu:hover{
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.close-menu:hover{
+  background: #202020;
+}
+
+/*HEADER/CABECERA
 header{
     position:fixed;
     width: 100%;
@@ -34,7 +98,8 @@ header{
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;       
+    align-items: center;
+    z-index: 999;       
 }
 
 .logo{
@@ -78,7 +143,7 @@ header{
 #check{
   display: none;
 }
-/*FIN DE HEADER/CABECERA*/
+FIN DE HEADER/CABECERA*/
 /*HOME*/
 
 .home {
@@ -186,6 +251,38 @@ body {
   line-height: 40px;
 }
 
+.about-descripcion button {
+  cursor: pointer;
+  background-color: rgb(124, 26, 26);
+  border: 2px solid #fff;
+  width: fit-content;
+  display: block;
+  margin:20px auto;
+  padding: 10px 22px;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  
+}
+.about-descripcion button a{
+  text-decoration: none;
+  color: #fff;
+}
+.about-descripcion button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(14, 120, 0);
+  z-index: -1;
+  transition: 1s;
+}
+.about-descripcion button:hover .overlay {
+  width: 100%;
+}
+
 .about-habilidades {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -218,46 +315,71 @@ body {
 }
 
 /*FIN DE SOBRE MI*/
+
 /*COMIENZO PORTFOLIO*/
-
-.portfolio{
-  width: 100%;
-  max-width: 1200px;
+.portfolio {
+  background-color: whitesmoke;
+  color: grey;
+  padding: 50px 20px;
+}
+.portfolio .contenido-portfolio {
+  max-width: 100%;
   margin: auto;
-  padding: 40px 0;
-  display: grid;
-  grid-template-columns: 3fr;
 }
-.portfolio-titulo{
-    color: black;
-    font-size: 35px;
-    margin-bottom: 30px;
-    display: flex;
-  }
-  
-.contenedor-proyecto{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.portfolio h2 {
+  font-size: 48px;
+  font-family: 'Righteous';
+  text-align: center;
+  padding: 20px 0;
 }
-
-.proyecto{
-  border-radius: 10px;
-  min-height: 275px;
-  font-weight: bold;
-  padding: 20px;
-  /*position: relative;*/
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
+.portfolio .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-
-.texto-proyecto{
-  color: crimson;
+.portfolio .galeria .proyecto {
+  position: relative;
+  max-width: 650px;
+  height: fit-content;  
+  margin: 10px;
+  cursor: pointer;
+}
+.portfolio .galeria .proyecto img {
+  width: 100%;
+  display: block;
+}
+.portfolio .galeria .proyecto .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 100%;
-  display:flex;
+  text-align: center;
+  background: linear-gradient(rgba(122, 122, 122, 0.6), rgba(124, 124, 124, 0.6));
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  transition: 1s;
+  font-size: 30px;
+  letter-spacing: 3px;
+  opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3, p {
+  margin-bottom: 20px;
+  transition: 1s;
+  text-decoration: none;
+  color: black;
+}
+.portfolio .galeria .proyecto .overlay:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+.portfolio .galeria .proyecto .overlay:hover h3, p {
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: black;
+}
+.portfolio .galeria .proyecto a{
+  text-decoration: none;
 }
 /*FIN PORTFOLIO*/
 
@@ -310,21 +432,8 @@ padding:15px 0px;
 .red-social a:hover{
   transform: scale(1.2);
 }
-/*
-.pie .grupo-1 .box figure{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
-/*TAMAÑO Y POSICION DEL LOGO
-.pie .grupo-1 .box figure img{
-  width: 150px;
-} */
-
 /*Final de Contactame*/
+
 .leyenda{
   text-align: center;
   color: #fff;
@@ -336,48 +445,55 @@ padding:15px 0px;
 
 
 /*RESPONSIVE*/
-@media(max-width: 991px){
-section {
-  padding: 50px 0px;
-}
-}
 
-
-@media(max-width:768px){
-  /*HEADER*/
-  .mostrar-menu, 
-  .esconder-menu{
-    display: block;
-  }
+@media(max-width:950px){
   .menu{
+    flex-direction: column;
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    right:-100%;
+    left: 0;
     top: 0;
-    text-align: center;
-    padding: 100px 0px;
-    z-index: 0;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(11, 10, 10);
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
     transition: 0.8s;
   }
-  .menu a{
+  .menu li {
+    padding: 0;
+    color: #fff;
+  }
+  .menu a {
+    color:rgb(255, 255, 255);
+    line-height: 60px;
+  }
+  .open-menu,
+  .close-menu{
     display: block;
-    padding: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
-  .esconder-menu{
-    position: absolute;
-    top: 40px;
-    right: 40px;
-  }
-  #check:checked ~ .menu{
-    right: 0;
+  
+  .close-menu{
+    align-self: flex-end;
   }
 
-  section {
-    padding: 20px 0;
+  .menu-opened {
+    opacity: 1;
+    pointer-events: all;
   }
 
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline:none;
+  }
+
+section {
+      padding: 50px 0px;
+    }
 .about-titulo {
     font-size: 25px;
 }
@@ -399,6 +515,16 @@ section {
     min-width: max-content;
 }
 
+.portfolio .galeria{
+  display: block;
+  width: 100%;
+}
+.portfolio .galeria .proyecto{
+  max-width: 100%;
+}
+.portfolio .galeria .proyecto img{
+  width: 100%;
+}
   /*FOOTER*/
   .pie .grupo-1{
     width: 90%;
