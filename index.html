@@ -5,34 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlas Development</title>
-    <link rel="shortcut icon" href="/img/logoatlas.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/estilos.css" />
     <script src="https://kit.fontawesome.com/1be5d8e7ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Atlas Development</a>
-            <input type="checkbox" id="check">
-                <label for="check" class="mostrar-menu">
-                <!--menu x3-->
-                &#8801
-                </label> 
-            <!--<img src="/img/logo.png" alt="logo de la compañia"> -->
-        <nav class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre Mi</a>
-            <a href="#portafolio">Portafolio</a>
-            <a href="#contacto">Contacto</a>
-                <label for="check" class="esconder-menu">
-                <!--cruz de cierre-->
-                &#215
-                </label>
-        </nav>
+    <header class="topheader">
+      <nav class="topnav">
+        <a href="https://atlas-development.netlify.app/" class="logo">Atlas Development</a>
+        <button class="open-menu" aria-label="abrir menu">
+          <img src="/img/menu.png" alt="cerrar menu">
+        </button>
+        <ul class="menu">
+          <button class="close-menu" aria-label="cerrar menu">
+            <img src="/img/cross.png" alt="cerrar menu">
+          </button>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#about-me">Sobre Mi</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+
     </header>
 
-    <div id:"inicio" class="home">
+    <div class="home" id="inicio">
 
         <div class="presentacion">
           <img src="/img/me.jpg" alt="Miranda Sebastian">
@@ -42,7 +44,7 @@
     </div>
    
 
-    <section id:"sobre-mi" class="about-me">
+    <section class="about-me" id="about-me">
       
       <div class="about-contenedor">
         
@@ -57,12 +59,17 @@
             <p>Con el tiempo me propuse mejorar mis habilidades, para poder monetizar las mismas. Si estas necesitando diseñar o modificar 
               tu proyecto, no dudes en contactarme.
             </p>
+            <button>
+              <a href="/docs/Cv-Miranda Sebastian.pdf" download>
+              Descargar CV <i class="fa-solid fa-download"></a></i>
+              <span class="overlay"></span>
+              
+            </button>
           </div>
           <div class="about-habilidades">
             <div class="skill__title">
               <h2>Mis Habilidades</h2>
             </div>
-            <!--ACA DEBERIA IR TODOS LOS ICONOS DE PROGRAMAS Y LENGUAJES DE PROGRAMACION QUE MANEJO-->
             
             <div class="skill__item">
               <img src="/Img/HTML.ico" alt="HTML5"/>
@@ -94,66 +101,63 @@
       </div>
     </section>
 
-    <div id:"portafolio" class="portfolio">
-      <h2 class="portfolio-titulo">Portafolio</h2>
-        <div class="contenedor-proyecto">
-
-          <div class="proyecto" style="background-image:url('img/add-image.png');">
-            <div class="texto-proyecto">
-              <h3>Proyecto 01</h3>
-              <p>Texto adicional Proyecto</p>
+    <section class="portfolio" id="portfolio">
+      <div class="contenido-portfolio">
+        <h2>Portafolio</h2>
+        <div class="galeria">
+          <div class="proyecto">
+            <a href="https://calculadordrywall.netlify.app/" target="_blank"><img src="/img/Page-Calculator.png" alt="calculadordrywall">
+            <div class="overlay">
+              <h3>Cálculo de Materiales</h3>
+              <p>HTML, CSS, Js</p>
+            </a>
             </div>
           </div>
-
-          <div class="proyecto" style="background-image:url('img/add-image.png');">
-            <div class="texto-proyecto">
-              <h3>Proyecto 02</h3>
-              <p>Texto adicional Proyecto</p>
+          <div class="proyecto">
+            <img src="/img/add-image.png" alt="#">
+            <div class="overlay">
+              <h3>Cálculo de Materiales</h3>
+              <p>HTML, CSS, Js</p>
             </div>
           </div>
-
-          <div class="proyecto" style="background-image:url('img/add-image.png');">
-            <div class="texto-proyecto">
-              <h3>Proyecto 03</h3>
-              <p>Texto adicional Proyecto</p>
+          <div class="proyecto">
+            <img src="/img/add-image.png" alt="#">
+            <div class="overlay">
+              <h3>Cálculo de Materiales</h3>
+              <p>HTML, CSS, Js</p>
             </div>
           </div>
-
-          <div class="proyecto" style="background-image:url('img/add-image.png');">
-            <div class="texto-proyecto">
-              <h3>Proyecto 04</h3>
-              <p>Texto adicional Proyecto</p>
+          <div class="proyecto">
+            <img src="/img/add-image.png" alt="#">
+            <div class="overlay">
+              <h3>Cálculo de Materiales</h3>
+              <p>HTML, CSS, Js</p>
             </div>
           </div>
-
-          <div class="proyecto" style="background-image:url('img/add-image.png');">
-            <div class="texto-proyecto">
-              <h3>Proyecto 05</h3>
-              <p>Texto adicional Proyecto</p>
+          <!--<div class="proyecto">
+            <img src="/img/add-image.png" alt="#">
+            <div class="overlay">
+              <h3>Cálculo de Materiales</h3>
+              <p>HTML, CSS, Js</p>
             </div>
           </div>
-
-          <div class="proyecto" style="background-image:url('img/add-image.png');">
-            <div class="texto-proyecto">
-              <h3>Proyecto 06</h3>
-              <p>Texto adicional Proyecto</p>
+          <div class="proyecto">
+            <img src="/img/add-image.png" alt="#">
+            <div class="overlay">
+              <h3>Cálculo de Materiales</h3>
+              <p>HTML, CSS, Js</p>
             </div>
           </div>
+        </div> -->
 
-        </div>
-    </div>
+      </div>
+    </section>
+    <script defer src="/js/script.js"></script>
 </body>
 
-<footer id:"contacto" class="pie">
+<footer class="pie" id="contact">
 
   <div class="grupo-1">
-    <!---<div class="box">
-       <figure>
-        <a href="#">
-          <img src="img/logoatlas.jpg" alt="#" class="logo-pie">
-        </a>
-      </figure> 
-    </div>--->
     <div class="box">
       <h2>CONTACTAME</h2>
       <div class="red-social">
